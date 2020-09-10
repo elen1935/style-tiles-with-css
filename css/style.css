@@ -10,17 +10,28 @@
 }
 
 
+/*
+link-color= color-2
+link-hover-color = color-3
+main-text-color = color-6
+
+
+primary-font = main-font
+secondary-font: header-font
+*/
+
+
 :root {
   --bg-color: #C3D2DE;
-  --link-color: #909156;
-  --link-hover-color: #A8625F;
+  --color-2: #909156;
+  --color-3: #A8625F;
   --color-4: #DEA2A0;
   --color-5: #DCDE8C;
-  --color-6: #5E5E5E;
+  /*--color-6: #5E5E5E;*/
 
-  --primary-font: "Spartan", sans-serif;
-  --secondary-font: "Roboto Slab", serif;
-  --main-text-color: #5E5E5E;
+  --main-font: "Spartan", sans-serif;
+  --header-font: "Roboto Slab", serif;
+  --main-text-color: #5E5E5E; /* QUITAR ESTE */
 
   --white-space: 1rem;
 }
@@ -32,21 +43,25 @@ a {
   transition: all 3s;
 }
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(1.5);
+  /*background-color: var(--link-hover-color);*/
+  transform: scale(1.1);
+  box-shadow: 4px 4px var(--main-text-color);
 }
 
 button:active {
   background-color: var(--bg-color);
+    /* CAMBIAR ESTO */
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
+  background-color: var(--color-3);
+  color: white;
+  padding: 0.2rem;
+  /*font-size: 4rem;*/
 }
 html {
   font-size: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--main-font);
 }
 
 img {
@@ -101,7 +116,7 @@ section {
 }
 
 .section-heading {
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 1.3rem;
   color: #777;
   margin: 0.5rem 0;
@@ -127,11 +142,11 @@ ul li:last-child {
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: var(--color-2);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-3);
 }
 
 .color-swatch-4 {
@@ -143,7 +158,7 @@ ul li:last-child {
 }
 
 .color-swatch-6 {
-  background-color: var(--color-6);
+  background-color: var(--main-text-color);
 }
 
 .logo li {
@@ -176,19 +191,37 @@ ul li:last-child {
 
 button {
   padding: 1rem;
-  background: var(--link-color);
+  /*background: var(--color-6);*/
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  /*font: bold 1.25em/1 var(--main-font);*/
+  font: var(--main-font);
   letter-spacing: 1px;
-  color: white;
+  /*color: white;*/
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
+  border-width: thin;
+  border-style: solid;
+  border-color: var(--main-text-color);
+}
+
+.primary-button {
+  background: var(--color-5);
+  color: var(--main-text-color);
+  font-weight: bold;
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: var(--color-4);
+  color: var(--main-text-color);
+  font-weight: bold;
+}
+
+.tertiary-button {
+  background: var(--color-2);
+  color: white;
+  border-color: white;
 }
 
 /*button:focus,
@@ -203,18 +236,19 @@ button:focus-within {
 }
 
 .h1-sample {
+  font-family: var(--header-font);
   font-size: 2.4rem;
   font-weight: bold;
 }
 
 .h2-sample {
-  font-family: var(--secondary-font);
+  font-family: var(--header-font);
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 p.typography-sample {
-  font-family: var(--secondary-font);
+  font-family: var(--main-font);
   line-height: 1.5;
   max-width: 960px;
 }
@@ -228,10 +262,10 @@ em {
 }
 
 a {
-  font-family: var(--primary-font);
-  color: var(--link-color);
-  font-weight: bold;
-  text-decoration: none;
+  font-family: var(--main-font);
+  color: var(--color-6);
+  text-decoration:underline;
+  text-decoration-color: var(--color-3);
   transition: all 0.2s;
 }
 
@@ -239,8 +273,9 @@ p[class*="font-details-"] {
   margin-top: 0.5rem;
   margin-bottom: calc(2 * var(--white-space));
   font-size: 0.75rem;
-  font-family: var(--secondary-font);
+  font-family: var(--main-font);
   color: #6f6f6f;
+  font-style: italic;
 }
 
 .adjectives ul {
@@ -252,9 +287,9 @@ p[class*="font-details-"] {
   flex-direction: column;
 }
 
-footer {
+/*footer {
   font-style: italic;
-}
+}*/
 
 @media (min-width: 800px) {
   main {
