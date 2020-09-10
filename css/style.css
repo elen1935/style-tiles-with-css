@@ -117,9 +117,14 @@ section {
 
 .section-heading {
   /*font-style: italic;*/
-  font-size: 1.3rem;
-  color: #777;
-  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: black;
+  margin: 2rem 0;
+  text-transform: uppercase;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: black;
+    padding-bottom: .5rem;
 }
 
 ul {
@@ -168,12 +173,11 @@ ul li:last-child {
 }
 
 .logo-swatch {
-  /*background: url(../img/pw_maze_white.png) top left repeat;*/
     background-image:url(../img/yogajoy_logo.svg);
     background-size: 100%;
-    width: 30vw;
+    width: 25vw;
     height: 11vw;
-    margin-top: 3vw;
+    /*margin-bottom: 1vw;*/
     background-repeat: no-repeat;
 }
 
